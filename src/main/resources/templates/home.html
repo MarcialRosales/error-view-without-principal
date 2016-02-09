@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" >
+    
+<head>
+	<title>Template - Home</title>
+</head>
+
+<body>
+	<span th:fragment="title">Template - Home</span>
+	<p/><span sec:authorize="isAuthenticated()">Logged in as:</span><span sec:authentication="name"></span>
+	<p/><span sec:authorize="isAnonymous()">Not Logged in</span>
+
+	<a href="close">try not authorized operation</a>
+</body>
+</html>
